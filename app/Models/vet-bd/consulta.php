@@ -3,7 +3,7 @@
     require "Conexao.php";
     $id = $_POST["id"];
     
-    $consulta = mysqli_query($conexao,"SELECT * FROM `usuario` WHERE `id` = '$id'");
+    $consulta = mysqli_query($conexao,"SELECT * FROM `usuarios` WHERE `id` = '$id'");
 
     $json = array();
     while ($row = mysqli_fetch_array($consulta)) {

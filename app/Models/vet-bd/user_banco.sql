@@ -55,7 +55,7 @@ INSERT INTO `usuario` (`id`, `nome`, `sobreNome`, `email`, `nascimento`, `sexo`,
 --
 -- Índices para tabela `usuario`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -65,7 +65,7 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 

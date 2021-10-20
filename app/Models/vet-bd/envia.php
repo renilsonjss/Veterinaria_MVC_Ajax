@@ -4,7 +4,7 @@ require "Conexao.php";
 
     if($_POST){
     $mail = $_POST["email"];
-    $condultaUser = "SELECT * FROM `usuario` WHERE `email` = '$mail'";
+    $condultaUser = "SELECT * FROM `usuarios` WHERE `email` = '$mail'";
 
     $user = mysqli_query($conexao, $condultaUser);
         $row = mysqli_num_rows($user);
@@ -17,7 +17,7 @@ require "Conexao.php";
         $sexo = $_POST["sexo"];
         $pais = $_POST["pais"];
 
-        $query = "INSERT INTO `usuario` (`id`, `nome`, `sobreNome`, `email`, `nascimento`, `sexo`, `pais`, `senha`) VALUES
+        $query = "INSERT INTO `usuarios` (`id`, `nome`, `sobreNome`, `email`, `nascimento`, `sexo`, `pais`, `senha`) VALUES
          (NULL, '$nome', '$sobreNome', '$email', '$dataNasc','$sexo', '$pais','$senha')";
         $insere = mysqli_query($conexao, $query);
     }else{

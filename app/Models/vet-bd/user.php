@@ -3,7 +3,7 @@
     require "conexao.php";
 
     
-    $consulta = mysqli_query($conexao,"SELECT * FROM `usuario`");
+    $consulta = mysqli_query($conexao,"SELECT * FROM `usuarios`");
 
     $json = array();
     while ($row = mysqli_fetch_array($consulta)) {

@@ -12,7 +12,7 @@
         $sexo = $_POST["sexo"];
         $pais = $_POST["pais"];
 
-        $actualiza = "UPDATE `usuario` SET `nome` = '$nome', `sobreNome` = '$sobreNome', `email` = '$email', `nascimento` = '$dataNasc', `sexo` = '$sexo',`pais` = '$pais',`senha` = '$senha' WHERE `usuario`.`id` = '$id'";
+        $actualiza = "UPDATE `usuarios` SET `nome` = '$nome', `sobreNome` = '$sobreNome', `email` = '$email', `nascimento` = '$dataNasc', `sexo` = '$sexo',`pais` = '$pais',`senha` = '$senha' WHERE `usuario`.`id` = '$id'";
         $user = mysqli_query($conexao, $actualiza);
     }  
 ?>

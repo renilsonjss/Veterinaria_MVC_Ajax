@@ -1,9 +1,13 @@
 CREATE TABLE usuarios(
-id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+id INT PRIMARY KEY AUTO_INCREMENT,
 nome VARCHAR(200),
 email VARCHAR(200),
 cpf VARCHAR(14),
-senha VARCHAR(32)
+senha VARCHAR(32),
+sobreNome VARCHAR(200),
+pais VARCHAR(200),
+sexo VARCHAR(200),
+nascimento VARCHAR(200)
 );
 
 CREATE TABLE veterinarios(
