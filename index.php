@@ -15,7 +15,6 @@
         <div id="table">
             <table  border="1px" cellpadding="5px" cellspacing="0">
                 <tr> <!-- <tr> -> table row -->
-                    <th>Id</th> <!-- <td> -> table data -->
                     <th>Nome</th> <!-- <th> -> table header -->
                     <th>Email</th>
                     <th>Senha</th>
@@ -32,16 +31,20 @@
 
 //Enquanto existir usuários no banco ele insere uma nova linha e exibe os dados
                 while ($row = mysqli_fetch_array($result)) {
-                    $id = $row['id_user'];
+                    $id_veterinario = $row['id_veterinario'];
                     $nome = $row['nome'];
                     $email = $row['email'];
                     $senha = $row['senha'];
+                    $cpf = $row['cpf'];
+                    $crmv = $row['crmv'];
                     echo "   
                         <tr>
-                            <td>$id</td>
+                            <td>$id_veterinario</td>
                             <td>$nome</td>
                             <td>$email</td>
                             <td>$senha</td>
+                            <td>$cpf</td>
+                            <td>$crmv</td>
                         </tr>";
                 }
                 ?>
@@ -52,12 +55,14 @@
 
             <div class="window" id="janela1">
                 <a href="#" class="fechar">X Fechar</a>
-                <h4>Cadastro de usuario</h4>
-                <form id="cadUsuario" action="" method="post">
+                <h4>Cadastro de veterinario</h4>
+                <form id="cadVeterinario" action="" method="post">
                     <label>Nome:</label><input type="text" name="nome" id="nome" />
                     <label>Email:</label><input type="text" name="email" id="email" />
                     <label>Senha:</label> <input type="text" name="senha" id="senha" />
-                    <br/><br/>
+                    <label>Id:</label> <input type="text" name="id_veterinario" id="id_veterinario" />
+                    <label>Cpf:</label> <input type="text" name="cpf" id="cpf" />
+                    <label>Crmv:</label> <input type="text" name="crmv" id="crmv" />
                     <input type="button" value="Salvar" id="salvar" />
                 </form>
             </div>
@@ -71,7 +76,7 @@
         /// Quando usuário clicar em salvar será feito todos os passo abaixo
         $('#salvar').click(function() {
 
-            var dados = $('#cadUsuario').serialize();
+            var dados = $('#cadVeterinario').serialize();
 
             $.ajax({
                     type: 'POST',
@@ -87,26 +92,23 @@
             return false;
         });
 
-//// aqui é o script para abrir o nosso pequeno modal
-
         $("a[rel=modal]").click(function(ev) {
             ev.preventDefault();
 
-            var id = $(this).attr("href"); //id = #janela1
+            var id_veterinario = $(this).attr("href"); 
 
             var alturaTela = $(document).height();
             var larguraTela = $(window).width();
 
-            //colocando o fundo preto
             $('#mascara').css({'width': larguraTela, 'height': alturaTela});
             $('#mascara').fadeIn(1000);
             $('#mascara').fadeTo("slow", 0.8);
 
-            var left = ($(window).width() / 2) - ($(id).width() / 2);
-            var top = ($(window).height() / 2) - ($(id).height() / 2);
+            var left = ($(window).width() / 2) - ($(id_veterinario).width() / 2);
+            var top = ($(window).height() / 2) - ($(id_veterinario).height() / 2);
 
-            $(id).css({'top': top, 'left': left});
-            $(id).show();
+            $(id_veterinario).css({'top': top, 'left': left});
+            $(id_veterinario).show();
         });
 
         $("#mascara").click(function() {
