@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Formulário de usuário</title>
+        <title>Formulário de Veterinário</title>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"
             integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
             crossorigin="anonymous">
@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="estilo2.css" type="text/css"/>
     </head>
     <body>
-        <a href="#janela1" rel="modal">Novo Usuario</a>
+        <a href="#janela1" rel="modal">Novo Veterinario</a>
         <!--        Tabela de exibição dos dados-->
         <div id="table">
             <table  border="1px" cellpadding="5px" cellspacing="0">
@@ -19,12 +19,15 @@
                     <th>Nome</th> <!-- <th> -> table header -->
                     <th>Email</th>
                     <th>Senha</th>
+                    <th>Id_veterinario</th>
+                    <th>Cpf</th>
+                    <th>Crmv</th>
                 </tr>
                 <?php
 //precisamos chamar esta página para realizarmos as queries com o banco
                 include 'conexao.php';
 // Select que traz todos os usuários cadastrados no banco de dados
-                $select = "SELECT * FROM usuario";
+                $select = "SELECT * FROM veterinarios";
                 $result = mysqli_query($connect, $select); //resultado do select
 
 //Enquanto existir usuários no banco ele insere uma nova linha e exibe os dados

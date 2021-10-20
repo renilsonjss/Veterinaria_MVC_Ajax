@@ -12,7 +12,7 @@
 <body>
   <div class="container-fluid">
     <nav class="navbar navbar-expand-xl navbar-light bg-dark row">
-      <a class="navbar-brand text-white" href="#">Bem-vindo, vet! Que tal começarmos seu cadastro?</a>
+      <a class="navbar-brand text-white" href="#">Bem-vindo, usuário! Que tal começarmos seu cadastro?</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

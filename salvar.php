@@ -1,10 +1,12 @@
 <?php
 	include "conexao.php";
 	$nome = $_POST['nome'];
+    $id_veterinario = $_POST['id_veterinario'];
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
     $cpf = $_POST['cpf'];
-	$sql = "INSERT INTO usuarios (nome,email,cpf,senha) VALUES ('$nome', '$email', '$senha','$cpf')";
+    $crmv = $_POST['crmv'];
+	$sql = "INSERT INTO veterinarios (nome,id_veterinario,email,cpf,senha,crmv) VALUES ('$nome', '$id_veterinario', '$email', '$cpf', '$senha', '$crmv')";
 	try {
         mysqli_query($connect, $sql);
     } catch (\Throwable $error) {
