@@ -43,7 +43,7 @@
               </div>
               <div class="col-md-6">
                 <label for="">Sobrenome</label>
-                <input type="text" name="sobreNome" id="sobreNome" class="form-control" placeholder="Insira a sua senha">
+                <input type="text" name="sobreNome" id="sobreNome" class="form-control" placeholder="Insira o seu sobrenome">
               </div>
             </div>
             <div class="form-row">

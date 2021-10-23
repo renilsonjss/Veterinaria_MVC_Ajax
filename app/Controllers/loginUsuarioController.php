@@ -1,6 +1,7 @@
 <?php
 
 require 'Models/usuarios.php';
+require 'homeController.php';
 
 Class loginUsuarioController extends Controller
 {
@@ -40,6 +41,7 @@ Class loginUsuarioController extends Controller
 
         $this->carregarTemplate('loginUsuario');
     }
+    
 }
 
 ?>
